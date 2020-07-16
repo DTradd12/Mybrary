@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const mathApi = require('../src/js/mathApi')
+const mathApi = require('../models/mathApi')
 
 // Get math facts route
 router.get('/', async (req, res) => {
