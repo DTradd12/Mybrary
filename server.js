@@ -2,7 +2,6 @@
 if(process.env.NODE_ENV !== 'production'){
     require('dotenv').config();
 };
-
 const express = require('express');
 const expressLayouts = require('express-ejs-layouts');
 const bodyParser = require('body-parser');
@@ -34,6 +33,8 @@ app.listen(process.env.PORT || 8000, () => {
 // Route Definitions imported from /routes folder
 const indexRouter = require('./routes/index');
 const authorRouter = require('./routes/authors');
+const mathRouter = require('./routes/math')
 
 app.use('/', indexRouter);
 app.use('/authors', authorRouter);
+app.use('/math', mathRouter);
